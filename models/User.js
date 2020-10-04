@@ -2,8 +2,6 @@
 const { Sequelize, INTEGER } = require("sequelize");
 // Require config databaseya
 const sequelize = require("../config/db");
-const Exschool = require("./Exschool");
-
 // Define tabel user
 const User = sequelize.define(
   "users",
@@ -20,7 +18,6 @@ const User = sequelize.define(
     timestamps: false,
   }
 );
-User.belongsTo(Exschool);
 
 // Ekspor user
 module.exports = User;
