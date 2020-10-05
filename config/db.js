@@ -3,7 +3,7 @@ const { Sequelize } = require("sequelize");
 
 // buat databasenya dan Connecting to a database
 const sequelize = new Sequelize({
-  host: "localhost",
+  host: "127.0.0.1",
   dialect: "mysql",
   username: "root",
   password: "root",

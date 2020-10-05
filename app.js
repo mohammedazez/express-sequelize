@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
   res.send("Selamat datang di Sequelize");
 });
 
-// Gunakan routernya untuk ambil data semuanya /getAll
+// Gunakan routernya untuk ambil data semuanya
 app.use("/user", userRouter);
 
 app.listen(3000, () => {

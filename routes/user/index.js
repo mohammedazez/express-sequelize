@@ -3,10 +3,32 @@ const express = require("express");
 // Import routernya
 const router = express.Router();
 // Require controllernya
-const { getAllUser } = require("./controller");
+const {
+  getAllUser,
+  getById,
+  adduser,
+  updateById,
+  deleteById,
+} = require("./controller");
 
-// Untuk mendapatkan data user
+// READ
+// Untuk mendapatkan semua data user
 router.get("/", getAllUser);
+
+// READ
+// Untuk mendapatkan data user sesua id
+router.get("/user/:id", getById);
+
+// CREATE
+// Untuk menambahkan data user
+router.post("/", adduser);
+
+// UPDATE
+// Untuk update data user berdasarkan id
+router.put("/user/:id", updateById);
+
+// Untuk menghapus data user berdasarkan id
+router.delete("/user/:id", deleteById);
 
 // Ekspor routernya
 module.exports = router;
