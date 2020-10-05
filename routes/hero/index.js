@@ -9,7 +9,7 @@ const {
   adduser,
   updateById,
   deleteById,
-} = require("./user.controller");
+} = require("./hero.controller");
 
 // READ
 // Untuk mendapatkan semua data user

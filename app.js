@@ -5,8 +5,10 @@ const { authenticate } = require("./config/db");
 const sequelize = require("./config/db");
 // Import untuk sinkronisasi
 const User = require("./models/User");
+const Hero = require("./models/Hero");
 // Import routernya
 const userRouter = require("./routes/user");
+const heroRouter = require("./routes/hero");
 const app = express();
 
 // Testing koneksinya
@@ -24,6 +26,7 @@ app.get("/", (req, res) => {
 
 // Gunakan routernya untuk ambil data semuanya
 app.use("/user", userRouter);
+app.use("/hero", heroRouter);
 
 app.listen(3000, () => {
   console.log("running on port succesfull");
